@@ -21,6 +21,12 @@
         <li>
             <a href="/welcome"> Welcome</a>
         </li>
+        <li>
+            <a href="/newWelcome"> New Welcome</a>
+        </li>
+        <li>
+            <a href="/newStudents">New student</a>
+        </li>
     </ul>
 </body>
 

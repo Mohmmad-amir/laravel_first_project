@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::get('/student', function () {
     return view('student.newStudent');
 });
+Route::get('/newStudents', 'TestController@studentPageView');
+Route::get('/newWelcome', 'TestController@welcomePage');
