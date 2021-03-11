@@ -25,3 +25,6 @@ Route::get('/student', function () {
 });
 Route::get('/newStudents', 'TestController@studentPageView');
 Route::get('/newWelcome', 'TestController@welcomePage');
+
+Route::get('/test', 'TestController@allData');
+Route::get('/test/{id}', 'TestController@singleData');
