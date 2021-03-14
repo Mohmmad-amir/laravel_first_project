@@ -14,8 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/welcome', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name("home");
+Route::get('/about', function () {
+    return view('about');
+})->name("about");
+Route::get('/add', 'TestController@addPage')->name('addPage');
+Route::POST('/add', 'TestController@addINFO')->name('addInfo');
+
+
 // Route::view('/hi', 'amir');
 Route::get('/', function () {
     return view('amir');

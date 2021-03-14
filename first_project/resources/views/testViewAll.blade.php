@@ -9,9 +9,15 @@
 </head>
 
 <body>
-    @foreach($data as $elm)
-    <h3>{{$elm->test_name}}</h3>
-    <p>{{$elm->test_roll}}</p>
+    @if (session('message'))
+        <h1>{{ session('message') }}</h1>
+
+    @endif
+    <a class="btn btn-success" href="{{ route('addPage') }}">add page</a>
+    @foreach ($data as $elm)
+        <h3>{{ $elm->test_name }}</h3>
+        <p>{{ $elm->test_roll }}</p>
+
     @endforeach
 </body>
 

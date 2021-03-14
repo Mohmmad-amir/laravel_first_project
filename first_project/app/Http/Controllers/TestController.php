@@ -29,4 +29,18 @@ class TestController extends Controller
         $data = test_table::findOrFail($id);
         return view('testView', compact('data'));
     }
+    public function addPage()
+    {
+        return view("addPage");
+    }
+    public function addINFO(Request $request)
+    {
+        $newTest = new test_table();
+        $newTest->test_name = $request->name;
+        $newTest->test_roll = $request->roll;
+        // $request->address = $request->address;
+
+        $newTest->save();
+        return redirect()->action('TestController@allData')->with('message', 'Dest data added');
+    }
 }

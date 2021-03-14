@@ -10,5 +10,5 @@ class test_table extends Model
     public $primaryKey = "id";
     public $incrementing = true;
     public $keyType = "int";
-    public $timestaps = false;
+    public $timestamps    = false;
 }
