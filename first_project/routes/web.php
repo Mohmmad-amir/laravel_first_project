@@ -35,3 +35,13 @@ Route::get('/newWelcome', 'TestController@welcomePage');
 
 Route::get('/test', 'TestController@allData');
 Route::get('/test/{id}', 'TestController@singleData');
+
+
+// route for product
+Route::get('/products', 'ProductController@index')->name('products.all');
+Route::get('/products/add', 'ProductController@create')->name('products.create');
+Route::post('/products/add', 'ProductController@store')->name('products.store');
+Route::get('products/{id}/show', 'ProductController@show')->name('products.show');
+Route::get('/products/{id}edit', 'ProductController@edit')->name('products.edit');
+Route::put('/products/{id}', 'ProductController@update')->name('products.update');
+Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
