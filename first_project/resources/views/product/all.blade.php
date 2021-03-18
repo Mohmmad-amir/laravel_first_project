@@ -8,15 +8,13 @@
                 <p>{{ session('message') }}</p>
             </div>
         @endif
-        <div class="my-4">
-            <a href="{{ route('products.create') }}">Add New Product</a>
-        </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <table class="table table-dark table-striped">
                     <thead>
                         <tr>
                             <th scope="col">id</th>
+                            <th scope="col">Image</th>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
                             <th scope="col">Stocks</th>
@@ -32,6 +30,9 @@
 
                             <tr>
                                 <th scope="row">{{ $product->id }}</th>
+                                <td><img class="rounded-circle" style="width: 80px"
+                                        src="{{ asset('asset/image/' . $product->image) }}" alt="">
+                                </td>
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->description }}</td>
                                 <td>{{ $product->stocks }}</td>

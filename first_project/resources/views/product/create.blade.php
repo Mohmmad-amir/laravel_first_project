@@ -14,8 +14,13 @@
         @endif
         <div class="row justify-content-center">
             <div class="col-md-6 bg-white px-3 py-4">
-                <form method="POST" action="{{ route('products.store') }}">
+                <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
                     @csrf
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="file" name="image" class="form-control" id="image" accept=".jpg, .png"
+                            aria-describedby="emailHelp">
+                    </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp">
